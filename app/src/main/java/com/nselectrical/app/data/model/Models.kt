@@ -59,3 +59,42 @@ val sampleDTRList = mutableListOf(
         division = "Nadia Division"
     )
 )
+
+val samplePoleList = mutableListOf(
+    PoleItem(
+        id = "1",
+        poleNo = "P-001",
+        typeOfPole = "PSC 8m",
+        spanLengthMeters = 45.0,
+        staySetCount = 1,
+        earthSpikeCount = 1,
+        suspensionCount = 2,
+        deadEndCount = 0,
+        service1PhCount = 3,
+        service3PhCount = 0
+    ),
+    PoleItem(
+        id = "2",
+        poleNo = "P-002",
+        typeOfPole = "PSC 9m",
+        spanLengthMeters = 52.0,
+        staySetCount = 0,
+        earthSpikeCount = 1,
+        suspensionCount = 1,
+        deadEndCount = 1,
+        service1PhCount = 2,
+        service3PhCount = 1
+    ),
+    PoleItem(
+        id = "3",
+        poleNo = "P-003",
+        typeOfPole = "PSC 8m",
+        spanLengthMeters = 38.0,
+        staySetCount = 1,
+        earthSpikeCount = 0,
+        suspensionCount = 2,
+        deadEndCount = 0,
+        service1PhCount = 4,
+        service3PhCount = 0
+    )
+)
