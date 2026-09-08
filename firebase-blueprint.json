@@ -1,0 +1,84 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile with electrical surveyor details and organization credentials",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "designation": { "type": "string" },
+        "employeeId": { "type": "string" },
+        "division": { "type": "string" },
+        "ccc": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["email", "name"]
+    },
+    "DTRRecord": {
+      "title": "DTRRecord",
+      "description": "Distribution Transformer Record for electrical survey tracking",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "dtrNo": { "type": "string" },
+        "division": { "type": "string" },
+        "substation": { "type": "string" },
+        "feeder": { "type": "string" },
+        "dtrCapacity": { "type": "string" },
+        "dtrType": { "type": "string" },
+        "meterNo": { "type": "string" },
+        "totalPoles": { "type": "number" },
+        "surveyProgress": { "type": "number" },
+        "status": { "type": "string" },
+        "createdBy": { "type": "string" },
+        "userId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["dtrNo", "division", "feeder"]
+    },
+    "PoleRecord": {
+      "title": "PoleRecord",
+      "description": "24-Column electrical pole survey entry",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "dtrId": { "type": "string" },
+        "dtrNo": { "type": "string" },
+        "poleNo": { "type": "string" },
+        "latitude": { "type": "number" },
+        "longitude": { "type": "number" },
+        "poleType": { "type": "string" },
+        "wireType": { "type": "string" },
+        "spanLength": { "type": "string" },
+        "isSurveyed": { "type": "boolean" },
+        "isDtrPole": { "type": "boolean" },
+        "isTapPole": { "type": "boolean" },
+        "staySetCount": { "type": "string" },
+        "stayClampType": { "type": "string" },
+        "earthPipes": { "type": "string" },
+        "bracketType": { "type": "string" },
+        "userId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["dtrId", "poleNo"]
+    }
+  },
+  "firestore": {
+    "users": {
+      "entity": "UserProfile",
+      "description": "Registered electrical surveyor profiles indexed by user UID"
+    },
+    "dtrs": {
+      "entity": "DTRRecord",
+      "description": "Distribution Transformer survey records"
+    },
+    "poles": {
+      "entity": "PoleRecord",
+      "description": "24-Column surveyed poles and electrical line inventory"
+    }
+  }
+}

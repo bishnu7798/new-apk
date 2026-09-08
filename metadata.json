@@ -1,0 +1,9 @@
+{
+  "name": "NS Electrical",
+  "description": "Android application for electrical survey management with DTR creation, 24-column Pole Schedule grid, Google Sheets integration, and Android APK export.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
